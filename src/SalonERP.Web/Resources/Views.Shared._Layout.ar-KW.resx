@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="AppTitle" xml:space="preserve"><value>نظام إدارة الصالون</value></data>
+  <data name="Customers" xml:space="preserve"><value>العملاء</value></data>
+  <data name="Login" xml:space="preserve"><value>تسجيل الدخول</value></data>
+</root>

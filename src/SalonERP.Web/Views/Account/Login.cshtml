@@ -1,0 +1,25 @@
+@model SalonERP.Web.ViewModels.Account.LoginViewModel
+@inject IViewLocalizer Localizer
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="h5">@Localizer["Login"]</h2>
+                <form method="post">
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <button class="btn btn-primary">@Localizer["Login"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

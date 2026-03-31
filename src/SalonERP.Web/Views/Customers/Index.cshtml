@@ -1,0 +1,31 @@
+@model IReadOnlyList<SalonERP.Application.DTOs.CustomerListItemDto>
+@inject IViewLocalizer Localizer
+
+<div class="card">
+    <div class="card-header">@Localizer["Customers"]</div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Localizer["NameAr"]</th>
+                    <th>@Localizer["NameEn"]</th>
+                    <th>@Localizer["Mobile"]</th>
+                    <th>@Localizer["LoyaltyPoints"]</th>
+                    <th>@Localizer["TotalSpend"]</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FullNameAr</td>
+                    <td>@item.FullNameEn</td>
+                    <td>@item.MobileNumber</td>
+                    <td>@item.LoyaltyPoints</td>
+                    <td>@item.TotalSpend.ToString("N2")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
